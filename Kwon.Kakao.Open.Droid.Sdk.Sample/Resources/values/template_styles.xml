@@ -49,9 +49,9 @@
         <item name="android:background">@drawable/selector_item_bg</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">72dp</item>
-        <item name="com.kakao.sdk.sample:kakao_showTitleDivider">false</item>
-        <item name="com.kakao.sdk.sample:kakao_dialogTitle">@drawable/popup_bg_a</item>
-        <item name="com.kakao.sdk.sample:kakao_titleTextColor">@color/color6</item>
+        <item name="kakao_showTitleDivider">false</item>
+        <item name="kakao_dialogTitle">@drawable/popup_bg_a</item>
+        <item name="kakao_titleTextColor">@color/color6</item>
     </style>
 
     <style name="CustomProgressDialog">

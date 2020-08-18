@@ -18,7 +18,7 @@
         style="@style/com_kakao_profile_property_value" />
 
     <com.kakao.sdk.sample.common.widget.KakaoDialogSpinner
-        xmlns:kakao="http://schemas.android.com/apk/res/com.kakao.sdk.sample"
+        xmlns:kakao="http://schemas.android.com/apk/res-auto"
         android:id="@+id/gender"
         android:layout_width="fill_parent"
         android:layout_height="57dp"

@@ -47,7 +47,7 @@
     </LinearLayout>
 
     <com.kakao.sdk.sample.common.widget.KakaoDialogSpinner
-        xmlns:kakao="http://schemas.android.com/apk/res/com.kakao.sdk.sample"
+        xmlns:kakao="http://schemas.android.com/apk/res-auto"
         android:id="@+id/message_type"
         style="@style/spinner"
         kakao:kakao_prompt="@string/message_type"

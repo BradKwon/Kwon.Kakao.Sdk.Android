@@ -14,7 +14,7 @@ using Kwon.Kakao.Open.Droid.Sdk.Sample.common;
 
 namespace Kwon.Kakao.Open.Droid.Sdk.Sample
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", MainLauncher = true)]
     public class SplashActivity : BaseActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

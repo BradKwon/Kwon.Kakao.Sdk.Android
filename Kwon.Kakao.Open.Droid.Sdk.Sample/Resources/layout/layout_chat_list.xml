@@ -6,7 +6,7 @@
                 android:layout_height="match_parent">
 
     <com.kakao.sdk.sample.common.widget.KakaoDialogSpinner
-        xmlns:kakao="http://schemas.android.com/apk/res/com.kakao.sdk.sample"
+        xmlns:kakao="http://schemas.android.com/apk/res-auto"
         android:id="@+id/chat_type"
         style="@style/spinner"
         kakao:kakao_prompt="@string/chat_type"
