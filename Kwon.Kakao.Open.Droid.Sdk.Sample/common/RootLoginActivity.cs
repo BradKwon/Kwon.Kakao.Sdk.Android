@@ -10,13 +10,11 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Kwon.Kakao.Open.Droid.Sdk.Sample.common;
 
-namespace Kwon.Kakao.Open.Droid.Sdk.Sample
+namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
 {
-    [Activity(Label = "@string/app_name", MainLauncher = true,
-        LaunchMode = Android.Content.PM.LaunchMode.SingleTop)]
-    public class SplashActivity : BaseActivity
+    [Activity(Label = "RootLoginActivity")]
+    public class RootLoginActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {

@@ -64,6 +64,9 @@
     <Compile Include="SplashActivity.cs" />
     <Compile Include="common\BaseActivity.cs" />
     <Compile Include="common\widget\WaitingDialog.cs" />
+    <Compile Include="common\RootLoginActivity.cs" />
+    <Compile Include="common\SampleSignupActivity.cs" />
+    <Compile Include="common\GlobalApplication.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -450,7 +453,10 @@
     <PackageReference Include="Xamarin.AndroidX.Fragment">
       <Version>1.2.4.2</Version>
     </PackageReference>
-  <PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.6.2" /></ItemGroup>
+  <PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.6.2" />  <PackageReference Include="Xamarin.Android.Volley">
+    <Version>1.1.1.1</Version>
+  </PackageReference>
+</ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Kwon.Kakao.Sdk.Auth.Droid\Kwon.Kakao.Sdk.Auth.Droid.csproj">
       <Project>{A4B9F6C5-231D-454B-B87A-DBD861E05321}</Project>
