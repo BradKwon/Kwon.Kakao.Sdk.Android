@@ -44,7 +44,7 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
             instance = this;
 
             KakaoSDK.Init(new KakaoSDKAdapter());
-            PushService.init();
+            PushService.Init();
 
             RequestQueue requestQueue = Volley.Toolbox.Volley.NewRequestQueue(this);
             var imageCache = new MyImageCache();

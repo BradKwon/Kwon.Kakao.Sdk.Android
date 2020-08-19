@@ -67,6 +67,8 @@
     <Compile Include="common\RootLoginActivity.cs" />
     <Compile Include="common\SampleSignupActivity.cs" />
     <Compile Include="common\GlobalApplication.cs" />
+    <Compile Include="common\KakaoSDKAdapter.cs" />
+    <Compile Include="common\widget\KakaoToast.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
