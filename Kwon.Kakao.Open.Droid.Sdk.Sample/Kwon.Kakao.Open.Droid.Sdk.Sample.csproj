@@ -74,6 +74,12 @@
     <Compile Include="kakaotalk\KakaoTalkMainActivity.cs" />
     <Compile Include="usermgmt\UsermgmtMainActivity.cs" />
     <Compile Include="common\SampleLoginActivity.cs" />
+    <Compile Include="common\LoginFragmentActivity.cs" />
+    <Compile Include="common\widget\ProfileLayout.cs" />
+    <Compile Include="usermgmt\ExtraUserPropertyLayout.cs" />
+    <Compile Include="common\widget\KakaoDialogSpinner.cs" />
+    <Compile Include="common\widget\DialogBuilder.cs" />
+    <Compile Include="common\widget\KakaoSpinnerAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

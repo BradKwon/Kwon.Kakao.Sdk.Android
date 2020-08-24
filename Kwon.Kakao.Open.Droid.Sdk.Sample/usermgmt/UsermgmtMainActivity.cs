@@ -10,7 +10,10 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Com.Kakao.Usermgmt;
+using Com.Kakao.Usermgmt.Response;
 using Kwon.Kakao.Open.Droid.Sdk.Sample.common;
+using Kwon.Kakao.Open.Droid.Sdk.Sample.common.widget;
 
 namespace Kwon.Kakao.Open.Droid.Sdk.Sample.usermgmt
 {
@@ -20,11 +23,16 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.usermgmt
     [Activity(Label = "UsermgmtMainActivity")]
     public class UsermgmtMainActivity : BaseActivity
     {
+        private MeV2Response response;
+        private ProfileLayout profileLayout;
+        private ExtraUserPropertyLayout extraUserPropertyLayout;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your application here
+            UserManagement.Instance.RequestUpdateProfile()
         }
     }
 }
