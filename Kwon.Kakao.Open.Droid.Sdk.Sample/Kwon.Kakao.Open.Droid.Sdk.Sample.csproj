@@ -69,6 +69,11 @@
     <Compile Include="common\GlobalApplication.cs" />
     <Compile Include="common\KakaoSDKAdapter.cs" />
     <Compile Include="common\widget\KakaoToast.cs" />
+    <Compile Include="KakaoServiceListActivity.cs" />
+    <Compile Include="kakaostory\KakaoStoryMainActivity.cs" />
+    <Compile Include="kakaotalk\KakaoTalkMainActivity.cs" />
+    <Compile Include="usermgmt\UsermgmtMainActivity.cs" />
+    <Compile Include="common\SampleLoginActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -441,6 +446,9 @@
     <Folder Include="Resources\values-ko\" />
     <Folder Include="Resources\values-w820dp\" />
     <Folder Include="Resources\xml\" />
+    <Folder Include="kakaostory\" />
+    <Folder Include="kakaotalk\" />
+    <Folder Include="usermgmt\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0.2" />

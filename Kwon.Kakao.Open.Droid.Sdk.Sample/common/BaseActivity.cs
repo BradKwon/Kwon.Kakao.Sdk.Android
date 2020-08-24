@@ -18,14 +18,14 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
             WaitingDialog.CancelWaitingDialog();
         }
 
-        protected void RedirectLoginActivity()
+        public void RedirectLoginActivity()
         {
             Intent intent = new Intent(this, typeof(RootLoginActivity));
             intent.SetFlags(ActivityFlags.NewTask | ActivityFlags.ClearTask | ActivityFlags.ClearTop);
             StartActivity(intent);
         }
 
-        protected void redirectSignupActivity()
+        public void RedirectSignupActivity()
         {
             Intent intent = new Intent(this, typeof(SampleSignupActivity));
             intent.SetFlags(ActivityFlags.NewTask | ActivityFlags.ClearTask | ActivityFlags.ClearTop);
