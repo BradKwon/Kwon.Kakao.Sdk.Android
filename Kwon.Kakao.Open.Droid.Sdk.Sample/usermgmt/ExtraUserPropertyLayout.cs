@@ -44,14 +44,14 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.usermgmt
             View view = Inflate(Context, Resource.Layout.layout_usermgmt_extra_user_property, this);
             name = view.FindViewById<EditText>(Resource.Id.name);
             age = view.FindViewById<EditText>(Resource.Id.age);
-            gender = view.FindViewById<ExtraUserPropertyLayout>(Resource.Id.gender);
+            gender = view.FindViewById<KakaoDialogSpinner>(Resource.Id.gender);
         }
 
         public Dictionary<string, string> GetProperties()
         {
             string nickNameValue = name.Text;
             string ageValue = age.Text;
-            string genderValue = gender.GetSelectedItem();
+            string genderValue = gender.GetSelectedItem().ToString();
 
             Dictionary<string, string> properties = new Dictionary<string, string>();
             properties.Add(NAME_KEY, nickNameValue);
@@ -62,7 +62,7 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.usermgmt
             return properties;
         }
 
-        void ShowProperties(IDictionary<string, string> properties)
+        public void ShowProperties(IDictionary<string, string> properties)
         {
             string nameValue = properties[NAME_KEY];
             if (nameValue != null)

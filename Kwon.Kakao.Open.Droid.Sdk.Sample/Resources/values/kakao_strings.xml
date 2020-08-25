@@ -2,4 +2,9 @@
     <string name="kakaotalk_host">kakaotalk</string>
     <string name="kakaolink_host">kakaolink</string>
     <string name="kakaostory_host">kakaostory</string>
+
+    <!-- Values from product flavor: cbt -->
+    <string name="kakao_app_key" translatable="false">dd4e9cb75815cbdf7d87ed721a659baf</string>
+    <string name="kakao_phase" translatable="false">cbt</string>
+    <string name="kakao_scheme" translatable="false">kakaodd4e9cb75815cbdf7d87ed721a659baf</string>
 </resources>

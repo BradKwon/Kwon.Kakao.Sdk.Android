@@ -13,7 +13,9 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
      *
      * @author MJ
      */
-    [Activity(Label = "RootLoginActivity")]
+    [Activity(ConfigurationChanges = Android.Content.PM.ConfigChanges.ScreenSize | Android.Content.PM.ConfigChanges.Orientation,
+        LaunchMode = Android.Content.PM.LaunchMode.SingleTop,
+        Theme = "@android:style/Theme.Light.NoTitleBar")]
     public class RootLoginActivity : BaseActivity, View.IOnClickListener
     {
         public void OnClick(View v)

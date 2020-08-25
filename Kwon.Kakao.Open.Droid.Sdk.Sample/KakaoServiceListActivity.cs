@@ -11,7 +11,7 @@ using static Android.Views.View;
 
 namespace Kwon.Kakao.Open.Droid.Sdk.Sample
 {
-    [Activity(Label = "KakaoServiceListActivity")]
+    [Activity(LaunchMode = Android.Content.PM.LaunchMode.SingleTop)]
     public class KakaoServiceListActivity : BaseActivity, IOnClickListener
     {
         protected override void OnCreate(Bundle savedInstanceState)
