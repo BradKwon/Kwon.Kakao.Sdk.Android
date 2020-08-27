@@ -7,4 +7,7 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+    <attr path="/api/package[@name='com.kakao.usermgmt.callback']/class[@name='MeV2ResponseCallback']" name="managedName">NativeMeV2ResponseCallback</attr>
+    <attr path="/api/package[@name='com.kakao.usermgmt.callback']/class[@name='UnLinkResponseCallback']" name="managedName">NativeUnLinkResponseCallback</attr>
+    <attr path="/api/package[@name='com.kakao.usermgmt.callback']/class[@name='LogoutResponseCallback']" name="managedName">NativeLogoutResponseCallback</attr>
 </metadata>

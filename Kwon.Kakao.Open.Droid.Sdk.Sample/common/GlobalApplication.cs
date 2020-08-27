@@ -23,6 +23,10 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
         private static volatile GlobalApplication instance = null;
         private ImageLoader imageLoader;
 
+        protected GlobalApplication(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
+        {
+        }
+
         /**
          * singleton 애플리케이션 객체를 얻는다.
          *

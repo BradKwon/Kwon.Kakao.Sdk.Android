@@ -12,11 +12,13 @@ using Com.Kakao.Auth;
 using Com.Kakao.Auth.Authorization.Accesstoken;
 using Com.Kakao.Auth.Network.Response;
 using Com.Kakao.Network;
+using Com.Kakao.Network.Callback;
 using Com.Kakao.Usermgmt;
 using Com.Kakao.Usermgmt.Callback;
 using Com.Kakao.Usermgmt.Response;
 using Com.Kakao.Util;
 using Com.Kakao.Util.Helper.Log;
+using Java.Lang;
 using Kwon.Kakao.Open.Droid.Sdk.Sample.common;
 using Kwon.Kakao.Open.Droid.Sdk.Sample.common.widget;
 
@@ -207,7 +209,7 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.usermgmt
                 receivedAction.Invoke(p0);
             }
 
-            public override void OnSuccess(Java.Lang.Object p0)
+            public override void OnSuccess(IAccessToken result)
             {
             }
         }
@@ -242,9 +244,9 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.usermgmt
                 }
             }
 
-            public override void OnSuccess(Java.Lang.Object p0)
+            public override void OnSuccess(MeV2Response result)
             {
-                action.Invoke(p0 as MeV2Response);
+                action.Invoke(result);
             }
         }
 
@@ -278,7 +280,7 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.usermgmt
                 }
             }
 
-            public override void OnSuccess(Java.Lang.Object p0)
+            public override void OnSuccess(Long result)
             {
                 if (baseActivity.TryGetTarget(out var activity))
                 {
@@ -304,12 +306,17 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.usermgmt
                 }
             }
 
-            public override void OnSuccess(Java.Lang.Object p0)
+            public override void OnSessionClosed(ErrorResult errorResult)
+            {
+                throw new NotImplementedException();
+            }
+
+            public override void OnSuccess(Long result)
             {
             }
         }
 
-        private class AccessTokenApiResponseCallback : ApiResponseCallback
+        private class AccessTokenApiResponseCallback : ApiResponseCallback<AccessTokenInfoResponse>
         {
             WeakReference<BaseActivity> baseActivity;
 
@@ -342,9 +349,9 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.usermgmt
                 }
             }
 
-            public override void OnSuccess(Java.Lang.Object p0)
+            public override void OnSuccess(AccessTokenInfoResponse result)
             {
-                var accessTokenInfoResponse = p0 as AccessTokenInfoResponse;
+                var accessTokenInfoResponse = result;
                 long userId = accessTokenInfoResponse.UserId;
                 Logger.D("this access token is for userId=" + userId);
 
@@ -362,7 +369,7 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.usermgmt
             }
         }
 
-        private class UsermgmtResponseCallback : ApiResponseCallback
+        private class UsermgmtResponseCallback : ApiResponseCallback<Java.Lang.Long>
         {
             WeakReference<BaseActivity> baseActivity;
 
@@ -390,7 +397,7 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.usermgmt
                 }
             }
 
-            public override void OnSuccess(Java.Lang.Object p0)
+            public override void OnSuccess(Long result)
             {
                 if (baseActivity.TryGetTarget(out var activity))
                 {

@@ -90,10 +90,12 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
                 }
             }
 
-            public ApiResponseCallback TokenRegisterCallback => new MyApiResponseCallback(applicationConfig);
+            public ApiResponseCallback<Java.Lang.Integer> TokenRegisterCallback => new MyApiResponseCallback(applicationConfig);
+
+            NativeApiResponseCallback IPushConfig.TokenRegisterCallback => throw new NotImplementedException();
         }
 
-        private class MyApiResponseCallback : ApiResponseCallback
+        private class MyApiResponseCallback : ApiResponseCallback<Java.Lang.Integer>
         {
             private IApplicationConfig applicationConfig;
 
@@ -118,7 +120,7 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
                 Logger.E("You should signup first");
             }
 
-            public override void OnSuccess(Java.Lang.Object p0)
+            public override void OnSuccess(Integer result)
             {
                 KakaoToast.MakeToast(applicationConfig.ApplicationContext, "succeeded to register fcm token...", ToastLength.Short).Show();
             }

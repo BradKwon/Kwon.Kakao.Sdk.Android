@@ -44,6 +44,10 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Additions\IAuthorizedRequest.cs" />
+    <Compile Include="Additions\ApiResponseCallback.cs" />
+    <Compile Include="Additions\AuthService.cs" />
+    <Compile Include="Additions\AccessTokenCallback.cs" />
+    <Compile Include="Additions\Session.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />

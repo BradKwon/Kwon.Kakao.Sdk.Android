@@ -127,13 +127,13 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
                 sessionClosedAction.Invoke(p0);
             }
 
-            public override void OnSuccess(Java.Lang.Object p0)
+            public override void OnSuccess(MeV2Response result)
             {
-                successAction.Invoke(p0 as MeV2Response);
+                successAction.Invoke(result);
             }
         }
 
-        private class RequestSignupResponseCallback : ApiResponseCallback
+        private class RequestSignupResponseCallback : ApiResponseCallback<Java.Lang.Long>
         {
             Action successAction;
             Action<ErrorResult> failureAction;
@@ -148,14 +148,14 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
             {
             }
 
-            public override void OnSuccess(Java.Lang.Object p0)
-            {
-                successAction.Invoke();
-            }
-
             public override void OnFailure(ErrorResult errorResult)
             {
                 failureAction.Invoke(errorResult);
+            }
+
+            public override void OnSuccess(Long result)
+            {
+                successAction.Invoke();
             }
         }
     }

@@ -1,4 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
+    <attr path="/api/package[@name='com.kakao.auth']/class[@name='ApiResponseCallback']" name="managedName">NativeApiResponseCallback</attr>
+    <attr path="/api/package[@name='com.kakao.auth']/class[@name='AccessTokenCallback']" name="managedName">NativeAccessTokenCallback</attr>
     <remove-node path="/api/package[@name='com.kakao.auth.network']/interface[@name='AuthorizedRequest']" />
 </metadata>
