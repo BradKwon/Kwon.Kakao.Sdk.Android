@@ -15,7 +15,9 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
     /**
      * Sample Activity that dose not use fragment for login.
      */
-    [Activity(Label = "SampleLoginActivity")]
+    [Activity(Label = "@string/title_activity_sample_login",
+        LaunchMode = Android.Content.PM.LaunchMode.SingleTop,
+        ParentActivity = typeof(RootLoginActivity))]
     public class SampleLoginActivity : BaseActivity
     {
         private ISessionCallback callback;

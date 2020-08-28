@@ -7,7 +7,9 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
     /**
      * Container activity for LoginFragment.
      */
-    [Activity(Label = "LoginFragmentActivity")]
+    [Activity(Label = "@string/title_activity_login_fragment",
+        LaunchMode = Android.Content.PM.LaunchMode.SingleTop,
+        ParentActivity = typeof(RootLoginActivity))]
     public class LoginFragmentActivity : BaseActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

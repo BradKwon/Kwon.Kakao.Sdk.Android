@@ -14,12 +14,12 @@
             android:layout_height="56dp"
             layout="@layout/view_sample_title" />
 
-        <com.kakao.sdk.sample.common.widget.ProfileLayout
+        <Kwon.Kakao.Open.Droid.Sdk.Sample.common.widget.ProfileLayout
             android:id="@+id/com_kakao_user_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <com.kakao.sdk.sample.usermgmt.ExtraUserPropertyLayout
+        <Kwon.Kakao.Open.Droid.Sdk.Sample.usermgmt.ExtraUserPropertyLayout
             android:id="@+id/extra_user_property"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

@@ -35,7 +35,7 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
         {
             base.OnCreate(savedInstanceState);
 
-            RequestMe();
+            RedirectMainActivity();
         }
 
         protected void ShowSignup()

@@ -50,6 +50,9 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
             Button fragmentButton = FindViewById<Button>(Resource.Id.button_login_with_fragment);
             activityButton.SetOnClickListener(this);
             fragmentButton.SetOnClickListener(this);
+
+            string keyHash = Com.Kakao.Util.Helper.Utility.GetKeyHash(this);
+            System.Diagnostics.Debug.WriteLine($"<<<keyHash={keyHash}");
         }
     }
 }
