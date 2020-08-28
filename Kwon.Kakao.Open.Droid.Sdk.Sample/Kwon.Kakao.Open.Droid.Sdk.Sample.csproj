@@ -80,6 +80,7 @@
     <Compile Include="common\widget\KakaoDialogSpinner.cs" />
     <Compile Include="common\widget\DialogBuilder.cs" />
     <Compile Include="common\widget\KakaoSpinnerAdapter.cs" />
+    <Compile Include="common\LoginFragmentActivityFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Telephony;
@@ -25,7 +26,7 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
          */
         public override ISessionConfig SessionConfig => new MySessionConfig();
 
-        public override IApplicationConfig ApplicationConfig => GlobalApplication.GetGlobalApplicationContext() as IApplicationConfig;
+        public override IApplicationConfig ApplicationConfig => new MyApplicationConfig();
 
         public override IPushConfig PushConfig => base.PushConfig;
 
@@ -132,14 +133,19 @@ namespace Kwon.Kakao.Open.Droid.Sdk.Sample.common
 
             public bool IsSaveFormData => true;
 
-            public bool IsSecureMode => true;
+            public bool IsSecureMode => false;
 
-            public bool IsUsingWebviewTimer => true;
+            public bool IsUsingWebviewTimer => false;
 
             public AuthType[] GetAuthTypes()
             {
                 return new AuthType[] { AuthType.KakaoLoginAll };
             }
+        }
+
+        public class MyApplicationConfig : Java.Lang.Object, IApplicationConfig
+        {
+            public Context ApplicationContext => Application.Context;
         }
     }
 }
